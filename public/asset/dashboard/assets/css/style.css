@@ -8352,6 +8352,7 @@ ul.labels-info li a i {
 .nav-link.icon i {
     font-size: 20px;
     position: relative;
+    color: #168dc1;
 }
 
 .nav-link.icon i::after {
@@ -28550,6 +28551,7 @@ body.rtl {
 
 .rtl .app-sidebar__toggle:after {
     right: 12px;
+    color: #168dc1;
     left: inherit;
 }
 
@@ -62112,6 +62114,7 @@ ul {
 }
 
 .app-sidebar__toggle:after {
+    color: #168dc1;
     content: "";
     position: absolute;
     width: 16px;
@@ -62334,7 +62337,7 @@ ul {
 }
 
 .side-menu .side-menu__icon {
-    color: var(--primary-bg-color);
+    color: #0085be;
     font-size: 18px;
     line-height: 30px;
     text-align: center;
@@ -66328,6 +66331,7 @@ ul {
 }
 
 .hover-submenu1 .app-sidebar__toggle:after {
+    color: #168dc1;
     content: "";
     position: absolute;
     width: 16px;

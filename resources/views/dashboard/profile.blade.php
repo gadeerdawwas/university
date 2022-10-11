@@ -35,8 +35,8 @@
                                                     </div>
                                                     <div class="profile-img-content text-dark text-start">
                                                         <div class="text-dark">
-                                                            <h3 class="h3 mb-2">Percy Kewshun</h3>
-                                                            <h5 class="text-muted">Web Developer</h5>
+                                                            <h3 class="h3 mb-2">{{ auth()->user()->first_name }} {{ auth()->user()->last_name }}</h3>
+                                                            {{-- <h5 class="text-muted">Web Developer</h5> --}}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -66,22 +66,22 @@
                             <div class="card">
                                 <div class="card-body">
                                     <div class="main-profile-contact-list">
-                                        <div class="me-5">
+                                        {{-- <div class="me-5">
                                             <div class="media mb-4 d-flex">
                                                 <div class="media-icon bg-secondary bradius me-3 mt-1">
                                                     <i class="fe fe-edit fs-20 text-white"></i>
                                                 </div>
                                                 <div class="media-body">
-                                                    <span class="text-muted">Groups</span>
+                                                    <span class="text-muted">Project</span>
                                                     <div class="fw-semibold fs-25">
                                                         5
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> --}}
                                         <div class="me-5 mt-5 mt-md-0">
                                             <div class="media mb-4 d-flex">
-                                                <div class="media-icon bg-danger bradius text-white me-3 mt-1">
+                                                <div class="media-icon btnprimary bradius text-white me-3 mt-1">
                                                     <span class="mt-3">
                                                         <i class="fe fe-users fs-20"></i>
                                                     </span>
@@ -96,7 +96,7 @@
                                         </div>
                                         <div class="me-0 mt-5 mt-md-0">
                                             <div class="media">
-                                                <div class="media-icon bg-primary text-white bradius me-3 mt-1">
+                                                <div class="media-icon btnprimary text-white bradius me-3 mt-1">
                                                     <span class="mt-3">
                                                         <i class="fe fe-cast fs-20"></i>
                                                     </span>
@@ -118,38 +118,38 @@
                         <div class="col-xl-8">
                             <div class="card">
                                 <div class="card-header">
-                                    <div class="card-title">Groups</div>
+                                    <div class="card-title">Project</div>
                                 </div>
                                 <div class="card-body">
                                     <div class="">
                                         <div class="media overflow-visible">
                                             <img class="avatar brround avatar-md me-3" src="{{ asset('asset/dashboard/assets/images/users/18.jpg')}}" alt="avatar-img">
                                             <div class="media-body valign-middle mt-2">
-                                                <a href="javascript:void(0)" class=" fw-semibold text-dark">Groups name</a>
-                                                <p class="text-muted mb-0">Groups title</p>
+                                                <a href="javascript:void(0)" class=" fw-semibold text-dark">Project name</a>
+                                                <p class="text-muted mb-0">Project title</p>
                                             </div>
                                             <div class="media-body valign-middle text-end overflow-visible mt-2">
-                                                <button class="btn btn-sm btn-primary" type="button">view</button>
+                                                <button class="btn btnprimary" type="button">view</button>
                                             </div>
                                         </div>
                                         <div class="media overflow-visible">
                                             <img class="avatar brround avatar-md me-3" src="{{ asset('asset/dashboard/assets/images/users/18.jpg')}}" alt="avatar-img">
                                             <div class="media-body valign-middle mt-2">
-                                                <a href="javascript:void(0)" class=" fw-semibold text-dark">Groups name</a>
-                                                <p class="text-muted mb-0">Groups title</p>
+                                                <a href="javascript:void(0)" class=" fw-semibold text-dark">Project name</a>
+                                                <p class="text-muted mb-0">Project title</p>
                                             </div>
                                             <div class="media-body valign-middle text-end overflow-visible mt-2">
-                                                <button class="btn btn-sm btn-primary" type="button">view</button>
+                                                <button class="btn btnprimary" type="button">view</button>
                                             </div>
                                         </div>
                                         <div class="media overflow-visible">
                                             <img class="avatar brround avatar-md me-3" src="{{ asset('asset/dashboard/assets/images/users/18.jpg')}}" alt="avatar-img">
                                             <div class="media-body valign-middle mt-2">
-                                                <a href="javascript:void(0)" class=" fw-semibold text-dark">Groups name</a>
-                                                <p class="text-muted mb-0">Groups title</p>
+                                                <a href="javascript:void(0)" class=" fw-semibold text-dark">Project name</a>
+                                                <p class="text-muted mb-0">Project title</p>
                                             </div>
                                             <div class="media-body valign-middle text-end overflow-visible mt-2">
-                                                <button class="btn btn-sm btn-primary" type="button">view</button>
+                                                <button class="btn btnprimary" type="button">view</button>
                                             </div>
                                         </div>
 

@@ -87,7 +87,7 @@
                                                 <a class="remove-item-btn"
                                                     data-bs-toggle="modal"
                                                     href="#deleteRecordModal">
-                                                    <button class="btn btn-sm btn-success badge" data-target="#user-form-modal" data-bs-toggle="" type="button">Edit</button> <button class="btn btn-sm btn-badge badge" type="button"><i class="fa fa-trash"></i></button>
+                                                    <button class="btn btn-sm btnprimary badge" data-target="#user-form-modal" data-bs-toggle="" type="button">Edit</button> <button class="btn btn-sm btn-badge badge" type="button"><i class="fa fa-trash"></i></button>
 
                                                 </a>
                                             </li>

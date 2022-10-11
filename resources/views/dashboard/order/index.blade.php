@@ -87,7 +87,7 @@
                                                 <a class="remove-item-btn"
                                                     data-bs-toggle="modal"
                                                     href="#deleteRecordModal">
-                                                    <button class="btn btn-sm btn-success badge" data-target="#user-form-modal" data-bs-toggle="" type="button">Edit</button> <button class="btn btn-sm btn-badge badge" type="button"><i class="fa fa-trash"></i></button>
+                                                    <button class="btn btn-sm btnprimary badge" data-target="#user-form-modal" data-bs-toggle="" type="button">Edit</button> <button class="btn btn-sm btn-badge badge" type="button"><i class="fa fa-trash"></i></button>
 
                                                 </a>
                                             </li>
@@ -123,11 +123,11 @@
                                                                     <div
                                                                     class="hstack gap-2 justify-content-center remove">
                                                                     <button
-                                                                        class="btn btn-link link-success fw-medium text-decoration-none"
+                                                                        class="btn btn btn-danger"
                                                                         data-bs-dismiss="modal"><i
                                                                             class="ri-close-line me-1 align-middle"></i>
                                                                         close</button>
-                                                                    <button class="btn btn-danger"
+                                                                    <button class="btn btn-success"
                                                                         id="delete-record">OK
                                                                         !!</button>
                                                                 </div>

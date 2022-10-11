@@ -68,33 +68,42 @@
                                             <form method="POST" action="{{ route('login') }}">
                                                 @csrf
 
-                                            <div class="wrap-input100 validate-input input-group" data-bs-validate="Valid email is required: ex@abc.xyz">
-                                                <a href="javascript:void(0)" class="input-group-text bg-white text-muted">
-                                                    <i class="zmdi zmdi-email text-muted" aria-hidden="true"></i>
-                                                </a>
-                                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                                <div class="row mb-3">
+                                                    <label for="email"
+                                                        class="col-md-5 col-form-label text-md-start">{{ __('Email Address') }}</label>
 
-                                                @error('email')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror
-                                            </div>
-                                            <div class="wrap-input100 validate-input input-group" id="Password-toggle">
-                                                <a href="javascript:void(0)" class="input-group-text bg-white text-muted">
-                                                    <i class="zmdi zmdi-eye text-muted" aria-hidden="true"></i>
-                                                </a>
-                                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                                    <div class="col-md-7">
+                                                        <input id="email" type="email"
+                                                            class="form-control @error('email') is-invalid @enderror"
+                                                            name="email" value="{{ old('email') }}" required
+                                                            autocomplete="email">
 
-                                                @error('password')
-                                                    <span class="invalid-feedback" role="alert">
-                                                        <strong>{{ $message }}</strong>
-                                                    </span>
-                                                @enderror
-                                            </div>
+                                                        @error('email')
+                                                            <span class="invalid-feedback" role="alert">
+                                                                <strong>{{ $message }}</strong>
+                                                            </span>
+                                                        @enderror
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <label for="password"
+                                                        class="col-md-5 col-form-label text-md-start">{{ __('Password') }}</label>
+
+                                                    <div class="col-md-7">
+                                                        <input id="password" type="password"
+                                                            class="form-control @error('password') is-invalid @enderror"
+                                                            name="password" required autocomplete="new-password">
+
+                                                        @error('password')
+                                                            <span class="invalid-feedback" role="alert">
+                                                                <strong>{{ $message }}</strong>
+                                                            </span>
+                                                        @enderror
+                                                    </div>
+                                                </div>
 
                                             <div class="container-login100-form-btn">
-                                                <button type="submit" class="btn btn-primary">
+                                                <button type="submit" class="btn btnprimary">
                                                     {{ __('Login') }}
                                                 </button>
                                             </div>

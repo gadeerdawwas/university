@@ -73,7 +73,7 @@
                                             <td class="text-nowrap align-middle">{{ $project->User->first_name }} {{$project->User->last_name   }}</td>
                                             <td class="text-nowrap align-middle">
 
-                                                
+
                                             </td>
 
                                             <td class="text-center align-middle">
@@ -87,7 +87,7 @@
                                                 <a class="remove-item-btn"
                                                     data-bs-toggle="modal"
                                                     href="#deleteRecordModal">
-                                                    <button class="btn btn-sm btn-success badge" data-target="#user-form-modal" data-bs-toggle="" type="button">Apply</button> <button class="btn btn-sm btn-badge badge" type="button"><i class="fa fa-trash"></i></button>
+                                                    <button class="btn btn-sm btnprimary badge" data-target="#user-form-modal" data-bs-toggle="" type="button">Apply</button> <button class="btn btn-sm btn-badge badge" type="button"><i class="fa fa-trash"></i></button>
 
                                                 </a>
                                             </li>
