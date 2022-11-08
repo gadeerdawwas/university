@@ -445,22 +445,22 @@
                 <ul class="mobile-menu">
                     <li id="menu-item-1268"
                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home current-menu-ancestor current-menu-parent menu-item-has-children parent menu-item-1268">
-                        <a href="#Home"><i class="fa fa-home"></i> Home</a>
+                        <a href="{{ route('site') }}#Home"><i class="fa fa-home"></i> Home</a>
 
                     </li>
                     <li id="menu-item-3373"
                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children parent menu-item-3373">
-                        <a href="#Project"><i class="fa fa-bookmark"></i> Project</a>
+                        <a href="{{ route('site') }}#Project"><i class="fa fa-bookmark"></i> Project</a>
 
                     </li>
                     <li id="menu-item-1313"
                         class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children parent menu-item-1313">
-                        <a href="#GPCommittee"><i class="fa fa-graduation-cap"></i> GPCommittee</a>
+                        <a href="{{ route('site') }}#GPCommittee"><i class="fa fa-graduation-cap"></i> GPCommittee</a>
 
                     </li>
                     <li id="menu-item-1269"
                         class="sub-menu-left menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children parent menu-item-1269">
-                        <a href="#Tags"><i class="fa fa-file-text"></i> Tags</a>
+                        <a href="{{ route('site') }}#Tags"><i class="fa fa-file-text"></i> Tags</a>
 
                     </li>
 
