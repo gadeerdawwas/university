@@ -54,8 +54,8 @@
                                             </th>
                                             <th>Group title</th>
                                             <th>Project Name</th>
-                                            <th>Status</th>
                                             <th>student</th>
+                                            <th> Status</th>
                                             <th class="text-center">Actions</th>
                                         </tr>
                                     </thead>

@@ -89,6 +89,7 @@
                                                 <th>Title</th>
                                                 <th>Description</th>
                                                 <th>Requirment</th>
+                                                <th>Created By</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -107,6 +108,7 @@
 
                                                     </td>
 
+                                                    <td class="text-nowrap align-middle">{{ $project->User->first_name }} {{ $project->User->last_name }}</td>
 
                                                     </td>
                                                 </tr>

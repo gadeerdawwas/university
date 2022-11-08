@@ -10,7 +10,7 @@
 
                 <!-- PAGE-HEADER -->
                 <div class="page-header">
-                    <h1 class="page-title">Add Product</h1>
+                    <h1 class="page-title">Add Project</h1>
 
                 </div>
                 <!-- PAGE-HEADER END -->
@@ -64,7 +64,7 @@
                                     </div>
                                     <div class="row">
                                         <label class="col-md-3 form-label mb-4">Project Requirment :</label>
-                                       
+
                                         <div class="col-md-9 mb-4">
                                             <input class="form-control" type="file" name="requirment">
                                         </div>
@@ -117,7 +117,7 @@
                                 <div class="row">
                                     <div class="col-md-3"></div>
                                     <div class="col-md-9">
-                                        <button class="btn btnprimary">Add Product</button>
+                                        <button class="btn btnprimary">Add Project</button>
                                     </div>
                                 </div>
                                 <!--End Row-->

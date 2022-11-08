@@ -17,7 +17,7 @@
 
                 <!-- PAGE-HEADER -->
                 <div class="page-header">
-                    <h1 class="page-title">Add Announcement</h1>
+                    <h1 class="page-title">Add Course Work</h1>
 
                 </div>
                 <!-- PAGE-HEADER END -->
@@ -44,7 +44,7 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-header">
-                                <div class="card-title">Add Announcement</div>
+                                <div class="card-title">Add Course Work</div>
                             </div>
                             <div class="card-body">
 
@@ -53,10 +53,10 @@
                                     @csrf
 
                                     <div class="row mb-4">
-                                        <label class="col-md-3 form-label">Announcement Title :</label>
+                                        <label class="col-md-3 form-label">Course Work Title :</label>
                                         <div class="col-md-9">
                                             <input type="text" class="form-control" required name="title"
-                                                placeholder="Announcement Title">
+                                                placeholder="Course Work Title">
                                         </div>
                                     </div>
 
@@ -64,13 +64,13 @@
 
                                     <!-- Row -->
                                     <div class="row">
-                                        <label class="col-md-3 form-label mb-4">Announcement Description :</label>
+                                        <label class="col-md-3 form-label mb-4">Course Work Description :</label>
                                         <div class="col-md-9 mb-4">
                                             <textarea class="form-control mb-4 " name="description" placeholder="" required rows="3"></textarea>
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <label class="col-md-3 form-label mb-4">Announcement Requirment :</label>
+                                        <label class="col-md-3 form-label mb-4">Course Work Requirment :</label>
                                         <div class="col-md-9 mb-4">
                                             <textarea class="form-control mb-4 " name="required" placeholder="" required rows="3"></textarea>
                                         </div>
@@ -86,7 +86,7 @@
                                 <div class="row">
                                     <div class="col-md-3"></div>
                                     <div class="col-md-9">
-                                        <button class="btn btnprimary">Add Announcement</button>
+                                        <button class="btn btnprimary">Add Course Work</button>
                                     </div>
                                 </div>
                                 <!--End Row-->

@@ -12,6 +12,7 @@
     <link rel="pingback" href="../xmlrpc.html" />
 
     <meta property="description" content="A CactusThemes WordPress Theme" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
     <link rel='stylesheet' id='google-font-css'
@@ -90,8 +91,12 @@
                                         @guest
                                             @if (Route::has('login'))
                                                 <li class="nav-item">
-                                                    <a class="nav-link" href="{{ route('login') }}"><i class="fa-solid fa-user-plus"></i> تسجيل دخول</a>
-                                                </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="{{ route('login') }}"> login </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="{{ route('register') }}"> Register </a>
+                                                    </li>                                             </li>
                                             @endif
 
 
@@ -234,7 +239,7 @@
 
                                                         </div>
                                                     </div>
-                                                    <a class="btn button-96063 btn-primary btn-lg " href="#"
+                                                    <a class="btn button-96063 btn-primary btn-lg " href="{{ route('register') }}"
                                                         data-delay=0>
                                                         <i class="fa fa-arrow-right"></i>&nbsp;&nbsp;Register Now
                                                     </a>
@@ -305,19 +310,7 @@
                                                                         </div>
                                                                     </div>
 
-                                                                    <div
-                                                                        class="wpb_text_column wpb_content_element  wpb_animate_when_almost_visible wpb_bottom-to-top bottom-to-top wpb_start_animation animated">
-                                                                        <div class="wpb_wrapper">
-                                                                            <p style="text-align: right;"> <a
-                                                                                    class="btn button-button_19 btn-default btn-lg "
-                                                                                    href="#1" data-delay="0">
-                                                                                    <i
-                                                                                        class="fa fa-leaf"></i>&nbsp;&nbsp;DETAILS
-                                                                                </a>
-                                                                            </p>
 
-                                                                        </div>
-                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -370,7 +363,7 @@
                                                             class="wpb_single_image wpb_content_element vc_align_center  wpb_animate_when_almost_visible wpb_bottom-to-top bottom-to-top vc_custom_1434962446018">
 
                                                             <figure class="wpb_wrapper vc_figure">
-                                                                <a href="../courses/user-experience-101/index.html"
+                                                                <a href="#"
                                                                     target="_blank"
                                                                     class="vc_single_image-wrapper   vc_box_border_grey"><img
                                                                         class="vc_single_image-img "
@@ -455,20 +448,16 @@
                                                                         <div class="member-item col-md-12 ">
                                                                             <div class="member-item-inner">
 
-                                                                                <div class="item-thumbnail"><a
-                                                                                        href="../member/john-doe-member-1/index.html"
-                                                                                        title="John Doe"><img
-                                                                                            width="360"
-                                                                                            height="360"
-                                                                                            src="{{ asset('front/wp-content/uploads/2014/03/U-member-4.jpg') }}"
-                                                                                            class="attachment-thumb_526x526 size-thumb_526x526 wp-post-image"
-                                                                                            alt=""
-                                                                                            srcset="{{ asset('front/wp-content/uploads/2014/03/U-member-4.jpg') }} 360w, {{ asset('front/wp-content/uploads/2014/03/U-member-4-150x150.jpg') }} 150w, {{ asset('front/wp-content/uploads/2014/03/U-member-4-300x300.jpg') }} 300w, {{ asset('front/wp-content/uploads/2014/03/U-member-4-50x50.jpg') }} 50w, {{ asset('front/wp-content/uploads/2014/03/U-member-4-80x80.jpg') }} 80w, {{ asset('front/wp-content/uploads/2014/03/U-member-4-263x263.jpg') }} 263w, {{ asset('front/wp-content/uploads/2014/03/U-member-4-100x100.jpg') }} 100w, {{ asset('front/wp-content/uploads/2014/03/U-member-4-90x90.jpg') }} 90w, {{ asset('front/wp-content/uploads/2014/03/U-member-4-255x255.jpg') }} 255w"
-                                                                                            sizes="(max-width: 360px) 100vw, 360px" /></a>
+                                                                                <div class="item-thumbnail">
+
+                                                                                    <a
+                                                                                        href="#"
+                                                                                        title="John Doe"><i style="font-size: 77px;
+                                                                                        margin: 55px;" class="fa-sharp fa-solid fa-users"></i></a>
                                                                                 </div>
                                                                                 <div class="item-content">
                                                                                     <h3 class="item-title"><a
-                                                                                            href="../member/john-doe-member-1/index.html"
+                                                                                            href="#"
                                                                                             title="title"
                                                                                             class="main-color-1-hover">{{ $User->first_name }}  {{ $User->last_name }}</a>
                                                                                     </h3>

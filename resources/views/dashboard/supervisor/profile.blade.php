@@ -56,7 +56,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleInputnumber">office id</label>
+                                <label for="exampleInputnumber">office number</label>
                                 <input type="text" class="form-control" name="office_id" value="{{ (($info ? $info->office_id : '')) }}" id="exampleInputnumber" required>
                             </div>
                             <div class="form-group">
@@ -69,7 +69,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputnumber">Interests</label>
-                                <input type="text" class="form-control" name="interests"  value="{{ (($info ? $info->interests : '')) }}" id="exampleInputnumber" required>
+                                <input type="text" class="form-control" name="interests"  value="{{ (($info ? $info->interests : '')) }}" id="exampleInputnumber" >
                             </div>
 
                         </div>

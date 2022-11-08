@@ -12,6 +12,7 @@
     <link rel="pingback" href="../xmlrpc.html" />
 
     <meta property="description" content="A CactusThemes WordPress Theme" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
     <link rel='stylesheet' id='google-font-css'
@@ -89,10 +90,12 @@
 
                                         @guest
                                             @if (Route::has('login'))
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="{{ route('login') }}"><i
-                                                            class="fa-solid fa-user-plus"></i> تسجيل دخول</a>
-                                                </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="{{ route('login') }}"> login </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="{{ route('register') }}"> Register </a>
+                                            </li>
                                             @endif
                                         @else
                                             @if (auth()->user()->is_student == 1)
@@ -254,11 +257,8 @@
                                                                                             class="item-thumbnail">
                                                                                             <a href="#"
                                                                                                 title="Chemical Engineering">
-                                                                                                <img src="front/wp-content/uploads/2014/03/U-member-4.jpg"
-                                                                                                    width="526"
-                                                                                                    height="526"
-                                                                                                    title="Chemical Engineering"
-                                                                                                    alt="Chemical Engineering" />
+                                                                                                <i style="font-size: 77px;
+                                                                                                margin: 55px;" class="fa-sharp fa-solid fa-users"></i>
                                                                                             </a>
                                                                                         </div>
                                                                                     </div>

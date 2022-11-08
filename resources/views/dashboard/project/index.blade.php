@@ -130,10 +130,10 @@
                                                                                         class="btn btn-link link-success fw-medium text-decoration-none"
                                                                                         data-bs-dismiss="modal"><i
                                                                                             class="ri-close-line me-1 align-middle"></i>
-                                                                                        إغلاق</button>
+                                                                                        Close</button>
                                                                                     <button class="btn btn-danger"
-                                                                                        id="delete-record">بتاكيد
-                                                                                        !!</button>
+                                                                                        id="delete-record">OK
+                                                                                        </button>
                                                                                 </div>
                                                                             </div>
                                                                         </form>

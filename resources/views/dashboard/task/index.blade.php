@@ -9,7 +9,7 @@
 
             <!-- PAGE-HEADER -->
             <div class="page-header">
-                <h1 class="page-title">Announcement</h1>
+                <h1 class="page-title">Course Work</h1>
 
 
             </div>
@@ -127,10 +127,10 @@
                                                                         class="btn btnprimary link-success fw-medium text-decoration-none"
                                                                         data-bs-dismiss="modal"><i
                                                                             class="ri-close-line me-1 align-middle"></i>
-                                                                        إغلاق</button>
+                                                                        Close</button>
                                                                     <button class="btn btn-danger"
-                                                                        id="delete-record">بتاكيد
-                                                                        !!</button>
+                                                                        id="delete-record">OK
+                                                                        </button>
                                                                 </div>
                                                             </div>
                                                         </form>
@@ -171,7 +171,7 @@
                                                                         class="btn btnprimary link-success fw-medium text-decoration-none"
                                                                         data-bs-dismiss="modal"><i
                                                                             class="ri-close-line me-1 align-middle"></i>
-                                                                        إغلاق</button>
+                                                                        Close</button>
 
                                                                 </div>
                                                             </div>

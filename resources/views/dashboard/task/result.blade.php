@@ -9,7 +9,7 @@
 
             <!-- PAGE-HEADER -->
             <div class="page-header">
-                <h1 class="page-title">Announcement</h1>
+                <h1 class="page-title">Course Work</h1>
 
 
             </div>

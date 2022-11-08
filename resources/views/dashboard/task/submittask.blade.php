@@ -9,7 +9,7 @@
 
                 <!-- PAGE-HEADER -->
                 <div class="page-header">
-                    <h1 class="page-title">Announcement</h1>
+                    <h1 class="page-title">Course Work Submition</h1>
 
 
                 </div>
@@ -86,7 +86,7 @@
 
                                                         <li class="list-inline-item" data-bs-toggle="tooltip"
                                                             data-bs-trigger="hover" data-bs-placement="top" title="detail">
-                                                            <a class="remove-item-btn" 
+                                                            <a class="remove-item-btn"
                                                                 href="{{ route('supervisor.detailtask',$task->id) }}">
                                                                 <button class="btn btn-sm btnprimary badge"
                                                                     data-target="#user-form-modal" data-bs-toggle=""

@@ -147,9 +147,9 @@
                     </li>
                     <li class="slide">
                         <a class="side-menu__item" data-bs-toggle="slide" href="javascript:void(0)"><i class="side-menu__icon fe fe-shopping-bag"></i>
-                            <span class="side-menu__label">User</span><i class="angle fe fe-chevron-right"></i></a>
+                            <span class="side-menu__label">Student</span><i class="angle fe fe-chevron-right"></i></a>
                         <ul class="slide-menu">
-                            <li><a href="{{ route('GPcommittee.alluser') }}" class="slide-item"> All User</a></li>
+                            <li><a href="{{ route('GPcommittee.alluser') }}" class="slide-item"> All Student</a></li>
                         </ul>
                     </li>
                     <li class="slide">

@@ -40,7 +40,34 @@
                         <div class="card-header border-bottom-0">
                             <h2 class="card-title"></h2>
                             <div class="page-options ms-auto">
+                                <div class="col-xxl-5 col-sm-12">
 
+
+                                    <form action="{{ route('GPcommittee.searchuser') }}" method="post">
+                                        @csrf
+                                        <div class="form-group">
+                                            <div class="row" style="">
+
+                                                <div class="col-md-3">
+
+                                                    <button class="btn btn-primary ">search</button>
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <input
+                                                    class="form-control"
+                                                    name="search"
+
+                                                  />
+                                                </div>
+
+                                            </div>
+
+
+
+                                        </div>
+
+                                    </form>
+                                </div><!--end col-->
                             </div>
                         </div>
 
@@ -71,7 +98,7 @@
                                             <td class="text-nowrap align-middle">{{ $project->description }}</td>
                                             <td class="text-nowrap align-middle">
 
-                                            
+
                                                 <a href="{{ asset('upload/project/'.$project->requirment) }}" download>
                                                     Downlad file
                                                   </a>
