@@ -202,6 +202,7 @@
                                                       <select name="is_student" id="" class="form-control">
                                                         <option value="0">Student</option>
                                                         <option value="1">Supervisor</option>
+                                                        <option value="2">GP committee</option>
                                                       </select>
                                                     </div>
                                                 </div>

@@ -18,6 +18,8 @@ class CreateProjectsTable extends Migration
             $table->string('title');
             $table->text('description');
             $table->text('requirment');
+            $table->text('image')->nullable();
+            $table->text('tag')->nullable();
             $table->foreignId('user_id');
             $table->timestamps();
         });

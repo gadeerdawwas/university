@@ -16,8 +16,13 @@ class CreateGroupsTable extends Migration
         Schema::create('groups', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable();
+            $table->foreignId('user_id_1')->nullable();
+            $table->foreignId('user_id_2')->nullable();
+            $table->foreignId('user_id_3')->nullable();
+            $table->foreignId('user_id_4')->nullable();
+            $table->foreignId('user_id_5')->nullable();
+            $table->foreignId('user_id_6')->nullable();
             $table->foreignId('user_id');
-            $table->foreignId('project_id');
             $table->boolean('status')->default(0);
 
             $table->timestamps();

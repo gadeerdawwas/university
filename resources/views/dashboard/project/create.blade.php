@@ -1,12 +1,5 @@
 @extends('dashboard.include.layout')
 
-@push('style')
-    <link href='https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css' rel='stylesheet'
-        type='text/css' />
-
-    <!-- Animate css -->
-    <link href="{{ asset('asset/dashboard/assets/css/animated.css') }}" rel="stylesheet" />
-@endpush
 
 @section('content')
     <div class="main-content app-content mt-0">
@@ -49,7 +42,7 @@
                             <div class="card-body">
 
 
-                                <form action="{{ route('supervisor.projects.store') }}" method="post">
+                                <form action="{{ route('supervisor.projects.store') }}" method="post" enctype="multipart/form-data">
                                     @csrf
 
                                     <div class="row mb-4">
@@ -71,9 +64,47 @@
                                     </div>
                                     <div class="row">
                                         <label class="col-md-3 form-label mb-4">Project Requirment :</label>
+                                       
                                         <div class="col-md-9 mb-4">
-                                            <textarea class="form-control mb-4 " name="requirment" placeholder="" required=rows="3"></textarea>
+                                            <input class="form-control" type="file" name="requirment">
                                         </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <label class="col-md-3 form-label mb-4">Image :</label>
+                                        <div class="col-md-9 mb-4">
+                                            <input class="form-control" type="file" name="file">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+
+
+
+
+
+                                            <label class="col-md-3 form-label mb-4">Tag :</label>
+
+                                            <div class="col-md-9 mb-4">
+                                                <select class="form-control select2" name="tag[]" data-placeholder="Choose Browser"  multiple="">
+
+                                                    <option value="Artificial Intelligence">
+                                                        Artificial Intelligence
+                                                    </option>
+                                                    <option value="Python">
+                                                        Python
+                                                    </option>
+                                                    <option value="Web Developer">
+                                                        Web Developer
+                                                    </option>
+                                                    <option  value="Data science">
+                                                        Data science
+                                                    </option>
+
+                                                </select>
+
+
+                                        </div>
+
                                     </div>
                                     <!--End Row-->
 
@@ -104,16 +135,3 @@
         </div>
     </div>
 @endsection
-
-@push('scripte')
-    <script src='https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js'></script>
-    <script src="{{ asset('asset/dashboard/assets/js/froala.js') }}"></script>
-
-
-    <!-- SIDEBAR JS -->
-    <script src="{{ asset('asset/dashboard/assets/plugins/sidebar/sidebar.js') }}"></script>
-
-    <!-- INTERNAL WYSIWYG Editor JS -->
-    <script src="{{ asset('assets/dashboard/plugins/wysiwyag/jquery.richtext.js') }}"></script>
-    <script src="{{ asset('assets/dashboard/plugins/wysiwyag/wysiwyag.js') }}"></script>
-@endpush

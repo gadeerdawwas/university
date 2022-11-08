@@ -119,7 +119,6 @@
 
         <!-- FOOTER -->
 
-        <!-- FOOTER CLOSED -->
     </div>
 
     <!-- BACK-TO-TOP -->

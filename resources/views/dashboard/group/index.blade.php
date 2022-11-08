@@ -56,7 +56,7 @@
                                             <th>Description</th>
                                             <th>Requirment</th>
                                             <th>Supervisor</th>
-                                            <th>Student</th>
+
                                             <th class="text-center">Actions</th>
                                         </tr>
                                     </thead>
@@ -69,12 +69,15 @@
                                             <td class="text-nowrap align-middle">{{ $loop->iteration }}</td>
                                             <td class="text-nowrap align-middle">{{ $project->title }}</td>
                                             <td class="text-nowrap align-middle">{{ $project->description }}</td>
-                                            <td class="text-nowrap align-middle">{{ $project->requirment }}</td>
-                                            <td class="text-nowrap align-middle">{{ $project->User->first_name }} {{$project->User->last_name   }}</td>
                                             <td class="text-nowrap align-middle">
 
-
+                                            
+                                                <a href="{{ asset('upload/project/'.$project->requirment) }}" download>
+                                                    Downlad file
+                                                  </a>
                                             </td>
+                                            <td class="text-nowrap align-middle">{{ $project->User->first_name }} {{$project->User->last_name   }}</td>
+
 
                                             <td class="text-center align-middle">
 
@@ -86,14 +89,16 @@
                                                 data-bs-placement="top" title="Apply">
                                                 <a class="remove-item-btn"
                                                     data-bs-toggle="modal"
-                                                    href="#deleteRecordModal">
-                                                    <button class="btn btn-sm btnprimary badge" data-target="#user-form-modal" data-bs-toggle="" type="button">Apply</button> <button class="btn btn-sm btn-badge badge" type="button"><i class="fa fa-trash"></i></button>
+                                                    href="#deleteRecordModal{{ $project->id }}">
+                                                    <button class="btn btn-sm btnprimary badge" data-target="#user-form-modal" data-bs-toggle="" type="button">Apply</button>
+                                                    <button class="btn btn-sm btn-badge badge" type="button">
+                                                       </button>
 
                                                 </a>
                                             </li>
 
 
-                                            <div class="modal fade zoomIn" id="deleteRecordModal"
+                                            <div class="modal fade zoomIn" id="deleteRecordModal{{ $project->id }}"
                                             tabindex="-1" aria-labelledby="deleteRecordLabel"
                                             aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-centered">
@@ -116,6 +121,7 @@
                                                             <div class="mt-4 text-center">
 
                                                                 <input type="hidden" name="project_id" value="{{ $project->id }}">
+                                                                <input type="hidden" name="group_id" value="{{ ($group) ? $group->id : 0 }}">
                                                                 <h4 class="fs-semibold">
                                                                     Are you sure to apply ?
                                                                 </h4>
@@ -129,7 +135,7 @@
                                                                         close</button>
                                                                     <button class="btn btn-danger"
                                                                         id="delete-record">OK
-                                                                        !!</button>
+                                                                        </button>
                                                                 </div>
                                                             </div>
                                                         </form>

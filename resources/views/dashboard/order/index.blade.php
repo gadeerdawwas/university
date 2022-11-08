@@ -52,26 +52,77 @@
                                             <th class="text-center">
                                                 #
                                             </th>
-                                            <th>Student Name</th>
+                                            <th>Group title</th>
                                             <th>Project Name</th>
                                             <th>Status</th>
+                                            <th>student</th>
                                             <th class="text-center">Actions</th>
                                         </tr>
                                     </thead>
                                     <tbody>
 
-                                       @foreach ($Groups as $Group)
+                                       @foreach ($Groups_order as $Group)
                                        <tr>
 
 
                                             <td class="text-nowrap align-middle">{{ $loop->iteration }}</td>
-                                            <td class="text-nowrap align-middle">{{ $Group->User->first_name }} {{ $Group->User->last_name }}</td>
+                                            <td class="text-nowrap align-middle">{{ $Group->Group->name }} </td>
                                             <td class="text-nowrap align-middle">{{ $Group->Project->title }}</td>
+                                            <td class="text-nowrap align-middle">
+
+
+
+                                                @foreach ($users as $user)
+                                                    @if ($user->id == $Group->Group->user_id_1)
+                                                        <a class="remove-item-btn"
+                                                            href="{{ route('supervisor.groupinfo',$Group->id) }}">
+                                                            <li>{{ $user->first_name }} {{ $user->last_name }}</li>
+                                                        </a>
+                                                    @endif
+
+                                                    @if ($user->id == $Group->Group->user_id_2)
+                                                        <a class="remove-item-btn"
+                                                           href="{{ route('supervisor.groupinfo',$Group->id) }}">
+                                                            <li>{{ $user->first_name }} {{ $user->last_name }}</li>
+                                                        </a>
+                                                    @endif
+
+                                                    @if ($user->id == $Group->Group->user_id_3)
+                                                        <a class="remove-item-btn"
+                                                           href="{{ route('supervisor.groupinfo',$Group->id) }}">
+                                                            <li>{{ $user->first_name }} {{ $user->last_name }}
+                                                            </li>
+                                                        </a>
+                                                    @endif
+                                                    @if ($user->id == $Group->Group->user_id_4)
+                                                        <a class="remove-item-btn"
+                                                           href="{{ route('supervisor.groupinfo',$Group->id) }}">
+                                                            <li>{{ $user->first_name }} {{ $user->last_name }}
+                                                            </li>
+                                                        </a>
+                                                    @endif
+                                                    @if ($user->id == $Group->Group->user_id_5)
+                                                        <a class="remove-item-btn"
+                                                           href="{{ route('supervisor.groupinfo',$Group->id) }}">
+                                                            <li>{{ $user->first_name }} {{ $user->last_name }}
+                                                            </li>
+                                                        </a>
+                                                    @endif
+                                                    @if ($user->id == $Group->Group->user_id_6)
+                                                        <a class="remove-item-btn"
+                                                           href="{{ route('supervisor.groupinfo',$Group->id) }}">
+                                                            <li>{{ $user->first_name }} {{ $user->last_name }}
+                                                            </li>
+                                                        </a>
+                                                    @endif
+                                                @endforeach
+
+                                            </td>
                                             <td class="text-nowrap align-middle">
                                                 @if ($Group->status == 1)
                                                 <span class="badge bg-success badge-sm  me-1 mb-1 mt-1">accepte</span>
                                                 @else
-                                                <span class="badge bg-danger badge-sm  me-1 mb-1 mt-1">decline</span>
+                                                <span class="badge bg-danger badge-sm  me-1 mb-1 mt-1">wait</span>
                                                 @endif
                                                 </td>
 
@@ -86,14 +137,14 @@
                                                 data-bs-placement="top" title="Apply">
                                                 <a class="remove-item-btn"
                                                     data-bs-toggle="modal"
-                                                    href="#deleteRecordModal">
+                                                    href="#deleteRecordModal{{ $Group->id }}">
                                                     <button class="btn btn-sm btnprimary badge" data-target="#user-form-modal" data-bs-toggle="" type="button">Edit</button> <button class="btn btn-sm btn-badge badge" type="button"><i class="fa fa-trash"></i></button>
 
                                                 </a>
                                             </li>
 
 
-                                            <div class="modal fade zoomIn" id="deleteRecordModal"
+                                            <div class="modal fade zoomIn" id="deleteRecordModal{{ $Group->id }}"
                                             tabindex="-1" aria-labelledby="deleteRecordLabel"
                                             aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-centered">
@@ -129,7 +180,7 @@
                                                                         close</button>
                                                                     <button class="btn btn-success"
                                                                         id="delete-record">OK
-                                                                        !!</button>
+                                                                        </button>
                                                                 </div>
                                                             </div>
                                                         </form>
@@ -152,7 +203,7 @@
                                     <div class="dataTables_paginate paging_bootstrap_full_number"
                                         id="sample_1_paginate">
 
-                                        {!! $Groups->withQueryString()->links('pagination::bootstrap-4') !!}
+                                        {!! $Groups_order->withQueryString()->links('pagination::bootstrap-4') !!}
                                     </div>
                                 </div>
                             </div>

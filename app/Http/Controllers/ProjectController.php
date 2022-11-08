@@ -38,10 +38,40 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
+        // return $request;
+        $tag = [];
+
+        $tag = $request->tag;
+        // return $request;
+        if ($tag != null) {
+            $tag_var = '';
+            foreach ($tag as $tags) {
+                $tag_var .= $tags . "   ,   ";
+            }
+        } else {
+            $tag_var = '';
+        }
+
+        $files_name = '';
+        if ($request->has('file')) {
+            $FileEx = $request->file('file')->getClientOriginalExtension();
+            $files_name = time() . '_' . rand() . '.' . $FileEx;
+            $request->file('file')->move(public_path('upload/project'), $files_name);
+        }
+        $requirment_name = '';
+
+        if ($request->has('requirment')) {
+            $FileEx = $request->file('requirment')->getClientOriginalExtension();
+            $requirment_name = time() . '_' . rand() . '.' . $FileEx;
+            $request->file('requirment')->move(public_path('upload/project'), $files_name);
+        }
+        // return $requirment_name;
         Project::create([
             'title' => $request->title,
             'description' => $request->description,
-            'requirment' => $request->requirment,
+            'requirment' => $requirment_name,
+            'tag' => $tag_var,
+            'image' => $files_name,
             'user_id' => auth()->user()->id
         ]);
 

@@ -41,7 +41,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="btn-profile">
-                                                    <button class="btn btn-primary mt-1 mb-1"> <i class="fa fa-edit"></i> <span>Edit</span></button>
+                                                   <a href="{{ route('supervisor.profile') }}"> <button class="btn btn-primary mt-1 mb-1"> <i class="fa fa-edit"></i> <span>Edit</span></button></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -87,9 +87,24 @@
                                                     </span>
                                                 </div>
                                                 <div class="media-body">
-                                                    <span class="text-muted">Student</span>
+                                                    <span class="text-muted">Project</span>
                                                     <div class="fw-semibold fs-25">
-                                                        8
+                                                        {{ $prject_count }}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="me-5 mt-5 mt-md-0">
+                                            <div class="media mb-4 d-flex">
+                                                <div class="media-icon btnprimary bradius text-white me-3 mt-1">
+                                                    <span class="mt-3">
+                                                        <i class="fe fe-users fs-20"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="media-body">
+                                                    <span class="text-muted">Group</span>
+                                                    <div class="fw-semibold fs-25">
+                                                        {{ $order_group_count }}
                                                     </div>
                                                 </div>
                                             </div>
@@ -102,9 +117,9 @@
                                                     </span>
                                                 </div>
                                                 <div class="media-body">
-                                                    <span class="text-muted">Project</span>
+                                                    <span class="text-muted">Task</span>
                                                     <div class="fw-semibold fs-25">
-                                                        3
+                                                        {{ $Task }}
                                                     </div>
                                                 </div>
                                             </div>
@@ -118,40 +133,27 @@
                         <div class="col-xl-8">
                             <div class="card">
                                 <div class="card-header">
-                                    <div class="card-title">Project</div>
+                                    <div class="card-title">Group</div>
                                 </div>
                                 <div class="card-body">
                                     <div class="">
+
+                                        @foreach ($order_group as $Group)
                                         <div class="media overflow-visible">
                                             <img class="avatar brround avatar-md me-3" src="{{ asset('asset/dashboard/assets/images/users/18.jpg')}}" alt="avatar-img">
                                             <div class="media-body valign-middle mt-2">
-                                                <a href="javascript:void(0)" class=" fw-semibold text-dark">Project name</a>
-                                                <p class="text-muted mb-0">Project title</p>
+                                                <a href="javascript:void(0)" class=" fw-semibold text-dark">{{ $Group->Group->name }}</a>
+                                                <p class="text-muted mb-0">{{ $Group->Project->title }}</p>
                                             </div>
                                             <div class="media-body valign-middle text-end overflow-visible mt-2">
+                                               <a href="{{ route('supervisor.groupinfo',$Group->Group->id) }}">
                                                 <button class="btn btnprimary" type="button">view</button>
+                                            </a>
+
                                             </div>
                                         </div>
-                                        <div class="media overflow-visible">
-                                            <img class="avatar brround avatar-md me-3" src="{{ asset('asset/dashboard/assets/images/users/18.jpg')}}" alt="avatar-img">
-                                            <div class="media-body valign-middle mt-2">
-                                                <a href="javascript:void(0)" class=" fw-semibold text-dark">Project name</a>
-                                                <p class="text-muted mb-0">Project title</p>
-                                            </div>
-                                            <div class="media-body valign-middle text-end overflow-visible mt-2">
-                                                <button class="btn btnprimary" type="button">view</button>
-                                            </div>
-                                        </div>
-                                        <div class="media overflow-visible">
-                                            <img class="avatar brround avatar-md me-3" src="{{ asset('asset/dashboard/assets/images/users/18.jpg')}}" alt="avatar-img">
-                                            <div class="media-body valign-middle mt-2">
-                                                <a href="javascript:void(0)" class=" fw-semibold text-dark">Project name</a>
-                                                <p class="text-muted mb-0">Project title</p>
-                                            </div>
-                                            <div class="media-body valign-middle text-end overflow-visible mt-2">
-                                                <button class="btn btnprimary" type="button">view</button>
-                                            </div>
-                                        </div>
+                                        @endforeach
+                                        {{-- 867665 --}}
 
 
                                     </div>

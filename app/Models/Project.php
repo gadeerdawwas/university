@@ -13,4 +13,8 @@ class Project extends Model
     {
         return $this->belongsTo(User::class);
     }
+    public function Ordergroup()
+    {
+        return $this->hasMany(order_group::class);
+    }
 }

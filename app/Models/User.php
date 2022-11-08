@@ -40,7 +40,11 @@ class User extends Authenticatable
 
     public function Userinfo()
     {
-        return $this->hasMany(Userinfo::class);
+        return $this->hasOne(Userinfo::class);
+    }
+    public function supervisorinfo()
+    {
+        return $this->hasOne(supervisorinfo::class);
     }
 
 

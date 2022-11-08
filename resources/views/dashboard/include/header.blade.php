@@ -68,14 +68,25 @@
                                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                                     <div class="drop-heading">
                                         <div class="text-center">
-                                            <h5 class="text-dark mb-0 fs-14 fw-semibold">Percy Kewshun</h5>
-                                            <small class="text-muted">Senior Admin</small>
+                                            <h5 class="text-dark mb-0 fs-14 fw-semibold">{{ auth()->user()->first_name }} {{ auth()->user()->last_name }}</h5>
+                                            {{-- <small class="text-muted">{{ ( auth()->user()->is_student == 0) ? 'Student' :  ( auth()->user()->is_student == 1) ? 'Supervisor' : 'GP committee' }}</small> --}}
                                         </div>
                                     </div>
+
+                                    @if(auth()->user()->is_student == 1)
                                     <div class="dropdown-divider m-0"></div>
-                                    <a class="dropdown-item" href="profile.html">
+                                    <a class="dropdown-item" href="{{ route('supervisor.profile') }}">
                                         <i class="dropdown-icon fe fe-user"></i> Profile
                                     </a>
+
+                                    @endif
+
+                                    @if(auth()->user()->is_student == 0)
+                                    <div class="dropdown-divider m-0"></div>
+                                    <a class="dropdown-item" href="{{ route('student.index') }}">
+                                        <i class="dropdown-icon fe fe-user"></i> Profile
+                                    </a>
+                                    @endif
 
                                     {{-- <a class="dropdown-item" href="login.html">
                                         <i class="dropdown-icon fe fe-alert-circle"></i> Sign out
