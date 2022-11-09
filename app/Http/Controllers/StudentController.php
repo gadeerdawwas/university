@@ -47,44 +47,42 @@ class StudentController extends Controller
 
     public function project()
     {
-        $group=Group::where('user_id', auth()->user()->id)
-                ->orWhere('user_id_1', auth()->user()->id)
-                ->orWhere('user_id_2', auth()->user()->id)
-                ->orWhere('user_id_3', auth()->user()->id)
-                ->orWhere('user_id_4', auth()->user()->id)
-                ->orWhere('user_id_5', auth()->user()->id)
-                ->orWhere('user_id_6', auth()->user()->id)
-                ->first();
+        $group = Group::where('user_id', auth()->user()->id)
+            ->orWhere('user_id_1', auth()->user()->id)
+            ->orWhere('user_id_2', auth()->user()->id)
+            ->orWhere('user_id_3', auth()->user()->id)
+            ->orWhere('user_id_4', auth()->user()->id)
+            ->orWhere('user_id_5', auth()->user()->id)
+            ->orWhere('user_id_6', auth()->user()->id)
+            ->first();
         // return $group;
         if ($group == NULL) {
-            $group =[];
-        }else{
-            $group= $group;
+            $group = [];
+        } else {
+            $group = $group;
         }
 
         $projects = Project::orderBy('id', 'desc')->paginate(10);
         // $projects=Project::find(1);
         // return $projects->User->first_name;
-        $users=User::all();
-        return view('dashboard.group.index', compact('projects','group','users'));
+        $users = User::all();
+        return view('dashboard.group.index', compact('projects', 'group', 'users'));
     }
 
 
     public function applyproject(Request $request, $id)
     {
         // return $request;
-        if ($request->group_id ==0) {
+        if ($request->group_id == 0) {
             return redirect()->back()->with('success', 'You are not joined to a group. Can\'t apply for a request ');
-        }else{
-            $order_group=order_group::where('group_id',$request->group_id)->first();
-
+        } else {
+            $order_group = order_group::where('group_id', $request->group_id)->first();
         }
         // return $order_group;
         if ($order_group) {
 
             return redirect()->back()->with('success', 'The request was submitted by ');
-
-        }else{
+        } else {
             order_group::create([
                 'group_id' => $request->group_id,
                 'project_id' => $request->project_id,
@@ -95,39 +93,37 @@ class StudentController extends Controller
     }
     public function groups()
     {
-        $users=User::where('is_student',0)->get();
+        $users = User::where('is_student', 0)->get();
 
-        $groups=Group::orderBy('id', 'desc')->paginate(10);
+        $groups = Group::orderBy('id', 'desc')->paginate(10);
         // $groups=Group::find(1);
         // return $users;
-        return view('dashboard.user.group.index',compact('groups','users'));
+        return view('dashboard.user.group.index', compact('groups', 'users'));
     }
     public function group()
     {
 
-        $group=Group::where('user_id', auth()->user()->id)
-                ->orWhere('user_id_1', auth()->user()->id)
-                ->orWhere('user_id_2', auth()->user()->id)
-                ->orWhere('user_id_3', auth()->user()->id)
-                ->orWhere('user_id_4', auth()->user()->id)
-                ->orWhere('user_id_5', auth()->user()->id)
-                ->orWhere('user_id_6', auth()->user()->id)
-                ->get();
-        $users=User::where('is_student',0)->get();
-        $user=User::find(auth()->user()->id);
+        $group = Group::where('user_id', auth()->user()->id)
+            ->orWhere('user_id_1', auth()->user()->id)
+            ->orWhere('user_id_2', auth()->user()->id)
+            ->orWhere('user_id_3', auth()->user()->id)
+            ->orWhere('user_id_4', auth()->user()->id)
+            ->orWhere('user_id_5', auth()->user()->id)
+            ->orWhere('user_id_6', auth()->user()->id)
+            ->get();
+        $users = User::where('is_student', 0)->get();
+        $user = User::find(auth()->user()->id);
         // return $users;
-        if (count($group) ===0) {
-            return view('dashboard.user.group.create',compact('users','user'));
+        if (count($group) === 0) {
+            return view('dashboard.user.group.create', compact('users', 'user'));
         } else {
             return redirect()->route('student.groups')->with('success', 'user  exit in group');
         }
-
-
     }
     public function savegroup(Request $request)
     {
         // return $request;
-        $group=Group::create([
+        $group = Group::create([
             'name' => $request->name,
             'user_id_1' => auth()->user()->id,
             'user_id_2' => $request->user_id_2,
@@ -146,20 +142,20 @@ class StudentController extends Controller
         return view('dashboard.user.group.create');
     }
 
-    public function groupupdate(Request $request,$id)
+    public function groupupdate(Request $request, $id)
     {
-        $group=Group::where('user_id', auth()->user()->id)
-                ->orWhere('user_id_1', auth()->user()->id)
-                ->orWhere('user_id_2', auth()->user()->id)
-                ->orWhere('user_id_3', auth()->user()->id)
-                ->orWhere('user_id_4', auth()->user()->id)
-                ->orWhere('user_id_5', auth()->user()->id)
-                ->orWhere('user_id_6', auth()->user()->id)
-                ->get();
+        $group = Group::where('user_id', auth()->user()->id)
+            ->orWhere('user_id_1', auth()->user()->id)
+            ->orWhere('user_id_2', auth()->user()->id)
+            ->orWhere('user_id_3', auth()->user()->id)
+            ->orWhere('user_id_4', auth()->user()->id)
+            ->orWhere('user_id_5', auth()->user()->id)
+            ->orWhere('user_id_6', auth()->user()->id)
+            ->get();
         // return $group;
         if (count($group) === 0) {
 
-            $group=Group::find($id)->update([
+            $group = Group::find($id)->update([
                 'user_id_2' => $request->user_id_2,
                 'user_id_3' => $request->user_id_3,
                 'user_id_4' => $request->user_id_4,
@@ -172,39 +168,37 @@ class StudentController extends Controller
         } else {
 
             return redirect()->route('student.groups')->with('success', 'user  exit in group');
-
         }
     }
     public function usertask()
     {
 
-        $group = Group::where([['status','=', 1]])
-        ->orWhere([['user_id_1', auth()->user()->id],
-        ['user_id_2', auth()->user()->id],
-        ['user_id_3', auth()->user()->id],
-        ['user_id_4', auth()->user()->id],
-        ['user_id_5', auth()->user()->id],
-        ['user_id_6', auth()->user()->id]])
-        ->first();
+        $group = Group::where([['status', '=', 1]])
+            ->orWhere([
+                ['user_id_1', auth()->user()->id],
+                ['user_id_2', auth()->user()->id],
+                ['user_id_3', auth()->user()->id],
+                ['user_id_4', auth()->user()->id],
+                ['user_id_5', auth()->user()->id],
+                ['user_id_6', auth()->user()->id]
+            ])
+            ->first();
 
         // return $group;
 
-        if($group){
+        if ($group) {
 
-            $tasks=Task_result::where('order_group_id',$group->id)->orderBy('id', 'desc')->paginate(10);
-            return view('dashboard.user.task.index',compact('tasks'));
-        }else{
+            $tasks = Task_result::where('order_group_id', $group->id)->orderBy('id', 'desc')->paginate(10);
+            return view('dashboard.user.task.index', compact('tasks'));
+        } else {
             return redirect()->route('student.usertask')->with('success', 'There are no tasks to display');
         }
-
-
-
     }
 
     public function task($id)
     {
-        $task= Task_result::find($id);
-        return view('dashboard.user.task.submittask',compact('task'));
+        $task = Task_result::find($id);
+        return view('dashboard.user.task.submittask', compact('task'));
     }
 
     public function submittask(Request $request, $id)
@@ -225,14 +219,45 @@ class StudentController extends Controller
     public function project_tag($tag)
     {
 
-            $streets = Project::where('tag' ,'like', '%' . $tag . '%')->pluck( 'id','title');
+        $streets = Project::where('tag', 'like', '%' . $tag . '%')->pluck('id', 'title');
 
-            return json_encode($streets);
-
+        return json_encode($streets);
     }
     public function allannouncements()
     {
-        $Announcements=Announcement::orderBy('id','desc')->paginate(10);
-        return view('dashboard.announcement',compact('Announcements'));
+        $Announcements = Announcement::orderBy('id', 'desc')->paginate(10);
+        return view('dashboard.announcement', compact('Announcements'));
+    }
+
+    public function searchsuper(Request $request)
+    {
+        $group = Group::where('user_id', auth()->user()->id)
+            ->orWhere('user_id_1', auth()->user()->id)
+            ->orWhere('user_id_2', auth()->user()->id)
+            ->orWhere('user_id_3', auth()->user()->id)
+            ->orWhere('user_id_4', auth()->user()->id)
+            ->orWhere('user_id_5', auth()->user()->id)
+            ->orWhere('user_id_6', auth()->user()->id)
+            ->first();
+        // return $group;
+        if ($group == NULL) {
+            $group = [];
+        } else {
+            $group = $group;
+        }
+
+        if ($request->search) {
+            $user=User::where('first_name','like', '%' . $request->search . '%')->first();
+            // return $user->id;
+            $projects=Project::where('user_id', $user->id)->orderBy('id','desc')->paginate(10);
+            $users = User::all();
+
+            return view('dashboard.group.index', compact('projects', 'group', 'users'));
+        }
+
+        // $projects=Project::find(1);
+        // return $projects->User->first_name;
+        $users = User::all();
+        return view('dashboard.group.index', compact('projects', 'group', 'users'));
     }
 }

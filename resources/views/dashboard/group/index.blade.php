@@ -43,7 +43,7 @@
                                 <div class="col-xxl-5 col-sm-12">
 
 
-                                    <form action="{{ route('GPcommittee.searchuser') }}" method="post">
+                                    <form action="{{ route('student.searchsuper') }}" method="post">
                                         @csrf
                                         <div class="form-group">
                                             <div class="row" style="">
@@ -56,6 +56,7 @@
                                                     <input
                                                     class="form-control"
                                                     name="search"
+                                                    placeholder="Enter Superivesor name"
 
                                                   />
                                                 </div>

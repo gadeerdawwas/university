@@ -62,6 +62,7 @@ Route::group(['prefix'=>'student','as'=>'student.','middleware' => ['auth','stud
     Route::post('submittask/{id}',[StudentController::class ,'submittask'])->name('submittask');
     Route::get('project_tag/{tag}',[StudentController::class ,'project_tag'])->name('project_tag');
     Route::get('allannouncements',[StudentController::class ,'allannouncements'])->name('allannouncements');
+    Route::post('searchsuper',[StudentController::class ,'searchsuper'])->name('searchsuper');
 
 });
 
