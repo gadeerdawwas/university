@@ -39,8 +39,8 @@
                     <div class="card">
                         <div class="card-header border-bottom-0">
                             <h2 class="card-title"></h2>
-                            <div class="page-options ms-auto">
-                                <div class="col-xxl-5 col-sm-12">
+                            <div class="page-options ">
+                                <div class="col-xxl-12 col-sm-12">
 
 
                                     <form action="{{ route('student.searchsuper') }}" method="post">
@@ -52,7 +52,7 @@
 
                                                     <button class="btn btn-primary ">search</button>
                                                 </div>
-                                                <div class="col-md-9">
+                                                <div class="col-md-8">
                                                     <input
                                                     class="form-control"
                                                     name="search"

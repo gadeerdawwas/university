@@ -146,7 +146,7 @@
                                                 <p class="text-muted mb-0">{{ $Group->Project->title }}</p>
                                             </div>
                                             <div class="media-body valign-middle text-end overflow-visible mt-2">
-                                               <a href="{{ route('supervisor.groupinfo',$Group->Group->id) }}">
+                                               <a href="{{ route('supervisor.groupinfo',$Group->id) }}">
                                                 <button class="btn btnprimary" type="button">view</button>
                                             </a>
 
