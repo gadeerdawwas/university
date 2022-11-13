@@ -124,14 +124,14 @@
                                                                 {{-- <p class="text-muted fs-14 mb-4 pt-1">Deleting your company will remove all of your information from our database.</p> --}}
                                                                 <div
                                                                     class="hstack gap-2 justify-content-center remove">
-                                                                    <button
-                                                                        class="btn btnprimary link-success fw-medium text-decoration-none"
-                                                                        data-bs-dismiss="modal"><i
-                                                                            class="ri-close-line me-1 align-middle"></i>
-                                                                        Close</button>
-                                                                    <button class="btn btn-danger"
+
+                                                                    <button type="button" class="btn btn-danger"
+                                                                    data-bs-dismiss="modal">Close</button>
+
+
+                                                                    <button class="btn btn-success"
                                                                         id="delete-record">OK
-                                                                        </button>
+                                                                    </button>
                                                                 </div>
                                                             </div>
                                                         </form>

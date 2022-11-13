@@ -155,19 +155,6 @@ src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
 
                                         <div class="form-control">
                                             <select class="form-control select2" name="project" data-placeholder="Choose Browser"  >
-                                                {{-- <option value=""></option> --}}
-                                                {{-- <option value="Artificial Intelligence">
-                                                    Artificial Intelligence
-                                                </option>
-                                                <option value="Python">
-                                                    Python
-                                                </option>
-                                                <option value="Web Developer">
-                                                    Web Developer
-                                                </option>
-                                                <option  value="Data science">
-                                                    Data science
-                                                </option> --}}
 
                                             </select>
 
@@ -202,19 +189,17 @@ src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
                 var tag=$(this).val();
                 console.log(tag);
 
-
                 $.ajax({
                         url: "{{ URL::to('student/project_tag') }}/" + tag,
                         type: "GET",
                         dataType: "json",
                         success: function(data) {
                             console.log(data);
-                            console.log('5555555');
+
                             $('select[name="project"]').empty();
                             $.each(data, function(key, value) {
                                 $('select[name="project"]').append('<option value="' +
                                     value + '">' + key + '</option>');
-
                             });
                         },
                     });

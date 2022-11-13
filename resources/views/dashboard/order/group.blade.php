@@ -176,13 +176,14 @@
 
                                                                                 <div
                                                                                     class="hstack gap-2 justify-content-center remove">
-                                                                                    <button class="btn btn btn-danger"
-                                                                                        data-bs-dismiss="modal"><i
-                                                                                            class="ri-close-line me-1 align-middle"></i>
-                                                                                        close</button>
+
+                                                                                    <button type="button" class="btn btn-danger"
+                                                                                    data-bs-dismiss="modal">Close</button>
+
+
                                                                                     <button class="btn btn-success"
                                                                                         id="delete-record">OK
-                                                                                       </button>
+                                                                                    </button>
                                                                                 </div>
                                                                             </div>
                                                                         </form>
