@@ -171,7 +171,7 @@
 
 
                                                                                 <h4 class="fs-semibold">
-                                                                                    Are you sure to accept apply ?
+                                                                                    Are you sure you want to reject group?
                                                                                 </h4>
 
                                                                                 <div

@@ -173,14 +173,14 @@ class StudentController extends Controller
     public function usertask()
     {
 
-        $group = Group::where([['status', '=', 1]])
-            ->orWhere([
+        $group = Group::where([
                 ['user_id_1', auth()->user()->id],
                 ['user_id_2', auth()->user()->id],
                 ['user_id_3', auth()->user()->id],
                 ['user_id_4', auth()->user()->id],
                 ['user_id_5', auth()->user()->id],
-                ['user_id_6', auth()->user()->id]
+                ['user_id_6', auth()->user()->id],
+                ['status', 1],
             ])
             ->first();
 
@@ -188,10 +188,16 @@ class StudentController extends Controller
 
         if ($group) {
 
+
             $tasks = Task_result::where('order_group_id', $group->id)->orderBy('id', 'desc')->paginate(10);
+            // return $tasks;
+            // return $tasks->count();
             return view('dashboard.user.task.index', compact('tasks'));
         } else {
-            return redirect()->route('student.usertask')->with('success', 'There are no tasks to display');
+            $tasks = Task_result::where('order_group_id', 0)->orderBy('id', 'desc')->paginate(10);
+            // return $tasks->count();
+            return view('dashboard.user.task.index', compact('tasks'));
+            // return redirect()->route('student.usertask')->with('success', 'There are no tasks to display');
         }
     }
 
