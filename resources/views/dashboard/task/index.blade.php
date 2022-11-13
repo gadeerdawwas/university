@@ -118,8 +118,9 @@
                                                             @csrf
                                                             @method('delete')
                                                             <div class="mt-4 text-center">
-                                                                <h4 class="fs-semibold">هل انت متاكد من
-                                                                    عملية الحذف ؟ </h4>
+                                                                <h4 class="fs-semibold"
+                                                                >Are you sure you want to delete this course work?
+                                                            </h4>
                                                                 {{-- <p class="text-muted fs-14 mb-4 pt-1">Deleting your company will remove all of your information from our database.</p> --}}
                                                                 <div
                                                                     class="hstack gap-2 justify-content-center remove">

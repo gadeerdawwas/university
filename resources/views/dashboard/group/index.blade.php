@@ -151,7 +151,8 @@
                                                                 <input type="hidden" name="project_id" value="{{ $project->id }}">
                                                                 <input type="hidden" name="group_id" value="{{ ($group) ? $group->id : 0 }}">
                                                                 <h4 class="fs-semibold">
-                                                                    Are you sure to apply ?
+                                                                    Are you sure you want to delete this group?
+
                                                                 </h4>
 
                                                                     <div

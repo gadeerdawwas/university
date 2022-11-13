@@ -168,7 +168,8 @@
 
 
                                                                 <h4 class="fs-semibold">
-                                                                    Are you sure to accept apply ?
+                                                                    Are you sure you want to delete this order?
+                                                                    ?
                                                                 </h4>
 
                                                                     <div

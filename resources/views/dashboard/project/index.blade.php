@@ -120,7 +120,8 @@
                                                                             @method('delete')
                                                                             <div class="mt-4 text-center">
                                                                                 <h4 class="fs-semibold">
-                                                                                    Are you sure to delete?
+                                                                                    Are you sure you want to delete this project?
+
                                                                                 </h4>
 
                                                                                 {{-- <p class="text-muted fs-14 mb-4 pt-1">Deleting your company will remove all of your information from our database.</p> --}}
