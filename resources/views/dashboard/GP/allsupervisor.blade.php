@@ -9,7 +9,7 @@
 
                 <!-- PAGE-HEADER -->
                 <div class="page-header">
-                    <h1 class="page-title">User</h1>
+                    <h1 class="page-title"> Supervisor</h1>
 
 
                 </div>

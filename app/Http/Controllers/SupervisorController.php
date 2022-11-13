@@ -65,7 +65,7 @@ class SupervisorController extends Controller
                 'status' =>1
             ]);
         }
-        return redirect()->back()->with('success', 'Update Order successfully');
+        return redirect()->back()->with('success', 'Order Updated  successfully');
 
     }
     public function groupinfo($id)

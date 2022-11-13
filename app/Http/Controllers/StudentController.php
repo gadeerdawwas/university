@@ -138,7 +138,7 @@ class StudentController extends Controller
             'group_id' => $group->id,
             'project_id' => $request->project,
         ]);
-        return redirect()->back()->with('success', 'Group added  successfully');
+        return redirect()->back()->with('success', 'Group Added successfully');
         return view('dashboard.user.group.create');
     }
 

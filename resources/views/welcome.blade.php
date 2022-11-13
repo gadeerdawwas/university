@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0">
-    <title>Online Training Courses </title>
+    <title>King Saud Graduation Porta    </title>
     <link rel="profile" href="http://gmpg.org/xfn/11" />
     <link rel="pingback" href="../xmlrpc.html" />
 

@@ -59,7 +59,7 @@ class TaskController extends Controller
         // return $oder_group_id;
 
 
-        return redirect()->back()->with('success', 'Data saved successfully');
+        return redirect()->back()->with('success', 'course work added successfully');
 
     }
 
@@ -108,7 +108,7 @@ class TaskController extends Controller
         $task=Task::find($id)->delete();
         Task_result::where('task_id',$task->id)->delete();
 
-        return redirect()->back()->with('success', 'Data delete successfully');
+        return redirect()->back()->with('success', 'course work deleted successfully');
     }
 
     public function alltask()

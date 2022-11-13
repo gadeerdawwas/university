@@ -11,7 +11,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('asset/site/logo-removebg-preview.png') }}" />
 
     <!-- TITLE -->
-    <title>Sash – Bootstrap 5 Admin & Dashboard Template</title>
+    <title>King Saud Graduation Porta</title>
 
     <!-- BOOTSTRAP CSS -->
        <!-- BOOTSTRAP CSS -->

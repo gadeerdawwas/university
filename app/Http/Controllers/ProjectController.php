@@ -75,7 +75,7 @@ class ProjectController extends Controller
             'user_id' => auth()->user()->id
         ]);
 
-        return redirect()->back()->with('success', 'Data saved successfully');
+        return redirect()->back()->with('success', 'Project added successfully');
 
     }
 
@@ -122,6 +122,6 @@ class ProjectController extends Controller
     public function destroy($id)
     {
         Project::find($id)->delete();
-        return redirect()->back()->with('success', 'Data delete successfully');
+        return redirect()->back()->with('success', 'Project deleted successfully');
     }
 }

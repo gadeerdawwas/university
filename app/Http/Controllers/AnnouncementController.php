@@ -44,7 +44,7 @@ class AnnouncementController extends Controller
 
         ]);
 
-        return redirect()->back()->with('success', 'Data saved successfully');
+        return redirect()->back()->with('success', 'Announcement added successfully');
     }
 
     /**
@@ -90,6 +90,6 @@ class AnnouncementController extends Controller
     public function destroy($id)
     {
         Announcement::find($id)->delete();
-        return redirect()->back()->with('success', 'Data delete successfully');
+        return redirect()->back()->with('success', 'Announcement deleted successfully');
     }
 }

@@ -28,7 +28,7 @@
                             <span class="side-menu__label">Project</span><i class="angle fe fe-chevron-right"></i></a>
                         <ul class="slide-menu">
                             <li><a href="{{ route('supervisor.projects.index') }}" class="slide-item"> All project</a></li>
-                            <li><a href="{{ route('supervisor.projects.create') }}" class="slide-item"> Create project</a></li>
+                            <li><a href="{{ route('supervisor.projects.create') }}" class="slide-item"> Add project</a></li>
 
                         </ul>
                     </li>
@@ -53,7 +53,7 @@
                             <span class="side-menu__label">Course Work</span><i class="angle fe fe-chevron-right"></i></a>
                         <ul class="slide-menu">
                             <li><a href="{{ route('supervisor.tasks.index') }}" class="slide-item"> All Course Work</a></li>
-                            <li><a href="{{ route('supervisor.tasks.create') }}" class="slide-item"> Create Course Work</a></li>
+                            <li><a href="{{ route('supervisor.tasks.create') }}" class="slide-item"> Add Course Work</a></li>
                             <li><a href="{{ route('supervisor.alltask') }}" class="slide-item"> Result Course Work</a></li>
 
                         </ul>
@@ -95,7 +95,7 @@
                             <span class="side-menu__label">Group</span><i class="angle fe fe-chevron-right"></i></a>
                         <ul class="slide-menu">
                             <li><a href="{{ route('student.groups') }}" class="slide-item"> All Group</a></li>
-                            <li><a href="{{ route('student.group') }}" class="slide-item"> Create Group</a></li>
+                            <li><a href="{{ route('student.group') }}" class="slide-item"> Add Group</a></li>
 
                         </ul>
                     </li>
@@ -164,7 +164,7 @@
                             <span class="side-menu__label">Announcement</span><i class="angle fe fe-chevron-right"></i></a>
                         <ul class="slide-menu">
                             <li><a href="{{ route('GPcommittee.announcements.index') }}" class="slide-item"> All Announcement</a></li>
-                            <li><a href="{{ route('GPcommittee.announcements.create') }}" class="slide-item"> Craete Announcement</a></li>
+                            <li><a href="{{ route('GPcommittee.announcements.create') }}" class="slide-item"> Add Announcement</a></li>
                         </ul>
                     </li>
                 @endif

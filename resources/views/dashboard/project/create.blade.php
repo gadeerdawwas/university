@@ -85,7 +85,7 @@
                                             <label class="col-md-3 form-label mb-4">Tag :</label>
 
                                             <div class="col-md-9 mb-4">
-                                                <select class="form-control select2" name="tag[]" data-placeholder="Choose Browser"  multiple="">
+                                                <select class="form-control select2" name="tag[]" data-placeholder="Choose tag"  multiple="">
 
                                                     <option value="Artificial Intelligence">
                                                         Artificial Intelligence
@@ -93,8 +93,8 @@
                                                     <option value="Python">
                                                         Python
                                                     </option>
-                                                    <option value="Web Developer">
-                                                        Web Developer
+                                                    <option value="Web Development">
+                                                        Web Development
                                                     </option>
                                                     <option  value="Data science">
                                                         Data science

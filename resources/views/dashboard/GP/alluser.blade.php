@@ -9,7 +9,7 @@
 
                 <!-- PAGE-HEADER -->
                 <div class="page-header">
-                    <h1 class="page-title">User</h1>
+                    <h1 class="page-title">Student</h1>
 
 
                 </div>
@@ -22,7 +22,7 @@
                         </div>
                         <div class="card">
                             <div class="card-header border-bottom-0">
-                                <h2 class="card-title">User</h2>
+                                <h2 class="card-title">Student</h2>
                                 <div class="page-options ms-auto">
 
 

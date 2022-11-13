@@ -138,8 +138,8 @@ src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
                                                 <option value="Python">
                                                     Python
                                                 </option>
-                                                <option value="Web Developer">
-                                                    Web Developer
+                                                <option value="Web Development">
+                                                    Web Development
                                                 </option>
                                                 <option  value="Data science">
                                                     Data science
